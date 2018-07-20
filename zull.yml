@@ -1,0 +1,356 @@
+zuul:
+  addHostHeader: true
+  routes:
+    event:
+      path: /event/**
+      serviceId: event-store-service
+      helperService: gateway-helper
+    devops:
+      path: /devops/**
+      serviceId: devops-service
+    iam:
+      path: /iam/**
+      serviceId: hzero-iam
+    oauth:
+      path: /oauth/**
+      sensitiveHeaders:
+      serviceId: oauth-server
+      stripPrefix: false
+    notify:
+      path: /notify/**
+      serviceId: notification-service
+    manager:
+      path: /manager/**
+      serviceId: manager-service
+    file:
+      path: /file/**
+      serviceId: file-service
+    org:
+      path: /org/**
+      serviceId: organization-service
+    
+    hsdr:
+      path: /scheduler/**
+      serviceId: hzero-scheduler    
+    hsdr-16007:
+      path: /hsdr-16007/**
+      serviceId: hzero-scheduler-16007
+    
+    
+    hpfm:
+      path: /hpfm/**
+      serviceId: hzero-platform
+    hpfm-3740:
+      path: /hpfm-3740/**
+      serviceId: hzero-platform-3740
+    hpfm-3711:
+      path: /hpfm-3711/**
+      serviceId: hzero-platform-3711
+    hpfm-10902:
+      path: /hpfm-10902/**
+      serviceId: hzero-platform-10902
+    hpfm-12706:
+      path: /hpfm-12706/**
+      serviceId: hzero-platform-12706
+    hpfm-12713:
+      path: /hpfm-12713/**
+      serviceId: hzero-platform-12713
+    hpfm-12695:
+      path: /hpfm-12695/**
+      serviceId: hzero-platform-12695
+    hpfm-16007:
+      path: /hpfm-16007/**
+      serviceId: hzero-platform-16007
+    hpfm-16353:
+      path: /hpfm-16353/**
+      serviceId: hzero-platform-16353
+    hpfm-18270:
+      path: /hpfm-18270/**
+      serviceId: hzero-platform-18270
+    hpfm-18272:
+      path: /hpfm-18272/**
+      serviceId: hzero-platform-18272  
+    hpfm-18184:
+      path: /hpfm-18184/**
+      serviceId: hzero-platform-18184 
+    hpfm-4459:
+      path: /hpfm-4459/**
+      serviceId: hzero-platform-4459  
+    
+    hmdm:
+      path: /hmdm/**
+      serviceId: hzero-mdm
+    hmdm-3740:
+      path: /hmdm-3740/**
+      serviceId: hzero-mdm-3740
+    hmdm-3711:
+      path: /hmdm-3711/**
+      serviceId: hzero-mdm-3711
+    hmdm-10902:
+      path: /hmdm-10902/**
+      serviceId: hzero-mdm-10902
+    hmdm-12706:
+      path: /hmdm-12706/**
+      serviceId: hzero-mdm-12706
+    hmdm-12713:
+      path: /hmdm-12713/**
+      serviceId: hzero-mdm-12713
+    hmdm-12695:
+      path: /hmdm-12695/**
+      serviceId: hzero-mdm-12695
+    hmdm-16007:
+      path: /hmdm-16007/**
+      serviceId: hzero-mdm-16007
+    hmdm-16353:
+      path: /hmdm-16353/**
+      serviceId: hzero-mdm-16353
+    hmdm-18270:
+      path: /hmdm-18270/**
+      serviceId: hzero-mdm-18270  
+    hmdm-18272:
+      path: /hmdm-18272/**
+      serviceId: hzero-mdm-18272
+    hmdm-18184:
+      path: /hmdm-18184/**
+      serviceId: hzero-mdm-18184 
+    hmdm-4459:
+      path: /hmdm-4459/**
+      serviceId: hzero-mdm-4459   
+    hmdm-15169:
+      path: /hmdm-15169/**
+      serviceId: hzero-mdm-15169
+    hmdm-6591:
+      path: /hmdm-6591/**
+      serviceId: hzero-mdm-6591
+    hmdm-2681:
+      path: /hmdm-2681/**
+      serviceId: hzero-mdm-2681    
+    
+    hfle:
+      path: /hfle/**
+      serviceId: hzero-file
+    hfle-3740:
+      path: /hfle-3740/**
+      serviceId: hzero-file-3740
+    hfle-3711:
+      path: /hfle-3711/**
+      serviceId: hzero-file-3711
+    hfle-10902:
+      path: /hfle-10902/**
+      serviceId: hzero-file-10902
+    hfle-12706:
+      path: /hfle-12706/**
+      serviceId: hzero-file-12706
+    hfle-12713:
+      path: /hfle-12713/**
+      serviceId: hzero-file-12713
+    hfle-12695:
+      path: /hfle-12695/**
+      serviceId: hzero-file-12695
+    hfle-16007:
+      path: /hfle-16007/**
+      serviceId: hzero-file-16007
+    hfle-16353:
+      path: /hfle-16353/**
+      serviceId: hzero-file-16353
+    hfle-18270:
+      path: /hfle-18270/**
+      serviceId: hzero-file-18270 
+    hfle-18272:
+      path: /hfle-18272/**
+      serviceId: hzero-file-18272
+    hfle-18184:
+      path: /hfle-18184/**
+      serviceId: hzero-file-18184  
+    hfle-4459:
+      path: /hfle-4459/**
+      serviceId: hzero-file-4459    
+
+    hmsg:
+      path: /hmsg/**
+      serviceId: hzero-message
+    hmsg-3740:
+      path: /hmsg-3740/**
+      serviceId: hzero-message-3740
+    hmsg-3711:
+      path: /hmsg-3711/**
+      serviceId: hzero-message-3711
+    hmsg-10902:
+      path: /hmsg-10902/**
+      serviceId: hzero-message-10902
+    hmsg-12706:
+      path: /hmsg-12706/**
+      serviceId: hzero-message-12706
+    hmsg-12713:
+      path: /hmsg-12713/**
+      serviceId: hzero-message-12713
+    hmsg-12695:
+      path: /hmsg-12695/**
+      serviceId: hzero-message-12695
+    hmsg-16007:
+      path: /hmsg-16007/**
+      serviceId: hzero-message-16007
+    hmsg-16353:
+      path: /hmsg-16353/**
+      serviceId: hzero-message-16353 
+    hmsg-18270:
+      path: /hmsg-18270/**
+      serviceId: hzero-message-18270
+    hmsg-18272:
+      path: /hmsg-18272/**
+      serviceId: hzero-message-18272
+    hmsg-18184:
+      path: /hmsg-18184/**
+      serviceId: hzero-message-18184  
+    hmsg-4459:
+      path: /hmsg-4459/**
+      serviceId: hzero-message-4459   
+    
+    hitf:
+      path: /hitf/**
+      serviceId: hzero-interface
+    hitf-3740:
+      path: /hitf-3740/**
+      serviceId: hzero-interface-3740
+    hitf-3711:
+      path: /hitf-3711/**
+      serviceId: hzero-interface-3711
+    hitf-10902:
+      path: /hitf-10902/**
+      serviceId: hzero-interface-10902
+    hitf-12706:
+      path: /hitf-12706/**
+      serviceId: hzero-interface-12706
+    hitf-12713:
+      path: /hitf-12713/**
+      serviceId: hzero-interface-12713
+    hitf-12695:
+      path: /hitf-12695/**
+      serviceId: hzero-interface-12695
+    hitf-16007:
+      path: /hitf-16007/**
+      serviceId: hzero-interface-16007
+    hitf-16353:
+      path: /hitf-16353/**
+      serviceId: hzero-interface-16353
+    hitf-18270:
+      path: /hitf-18270/**
+      serviceId: hzero-interface-18270
+    hitf-18272:
+      path: /hitf-18272/**
+      serviceId: hzero-interface-18272
+    hitf-18184:
+      path: /hitf-18184/**
+      serviceId: hzero-interface-18184  
+    hitf-4459:
+      path: /hitf-4459/**
+      serviceId: hzero-interface-4459   
+      
+    spfm:
+      path: /spfm/**
+      serviceId: srm-platform
+    spfm-3740:
+      path: /spfm-3740/**
+      serviceId: srm-platform-3740
+    spfm-3711:
+      path: /spfm-3711/**
+      serviceId: srm-platform-3711
+    spfm-10902:
+      path: /spfm-10902/**
+      serviceId: srm-platform-10902
+    spfm-12706:
+      path: /spfm-12706/**
+      serviceId: srm-platform-12706
+    spfm-12713:
+      path: /spfm-12713/**
+      serviceId: srm-platform-12713
+    spfm-12695:
+      path: /spfm-12695/**
+      serviceId: srm-platform-12695
+    spfm-16007:
+      path: /spfm-16007/**
+      serviceId: srm-platform-16007
+    spfm-16353:
+      path: /spfm-16353/**
+      serviceId: srm-platform-16353
+    spfm-18270:
+      path: /spfm-18270/**
+      serviceId: srm-platform-18270
+    spfm-18272:
+      path: /spfm-18272/**
+      serviceId: srm-platform-18272  
+    spfm-18184:
+      path: /spfm-18184/**
+      serviceId: srm-platform-18184
+    spfm-4459:
+      path: /spfm-4459/**
+      serviceId: srm-platform-4459 
+    spfm-15169:
+      path: /spfm-15169/**
+      serviceId: srm-platform-15169
+    spfm-6591:
+      path: /spfm-6591/**
+      serviceId: srm-platform-6591
+    spfm-2681:
+      path: /spfm-2681/**
+      serviceId: srm-platform-2681  
+      
+    sspr:
+      path: /sspr/**
+      serviceId: srm-supplier
+    sspr-3740:
+      path: /sspr-3740/**
+      serviceId: srm-supplier-3740
+    sspr-3711:
+      path: /sspr-3711/**
+      serviceId: srm-supplier-3711
+    sspr-10902:
+      path: /sspr-10902/**
+      serviceId: srm-supplier-10902
+    sspr-12706:
+      path: /sspr-12706/**
+      serviceId: srm-supplier-12706
+    sspr-12713:
+      path: /sspr-12713/**
+      serviceId: srm-supplier-12713
+    sspr-12695:
+      path: /sspr-12695/**
+      serviceId: srm-supplier-12695
+    sspr-16007:
+      path: /sspr-16007/**
+      serviceId: srm-supplier-16007
+    sspr-16353:
+      path: /sspr-16353/**
+      serviceId: srm-supplier-16353
+    sspr-18270:
+      path: /sspr-18270/**
+      serviceId: srm-supplier-18270
+    sspr-18272:
+      path: /sspr-18272/**
+      serviceId: srm-supplier-18272  
+    sspr-18184:
+      path: /sspr-18184/**
+      serviceId: srm-supplier-18184
+    sspr-4459:
+      path: /sspr-4459/**
+      serviceId: srm-supplier-4459
+    sspr-15169:
+      path: /sspr-15169/**
+      serviceId: srm-supplier-15169
+    sspr-6591:
+      path: /sspr-6591/**
+      serviceId: srm-supplier-6591
+    sspr-2681:
+      path: /sspr-2681/**
+      serviceId: srm-supplier-2681  
+      
+    iam-3740:
+      path: /iam-3740/**
+      serviceId: hzero-iam-3740
+    iam-3711:
+      path: /iam-3711/**
+      serviceId: hzero-iam-3711
+    iam-16007:
+      path: /iam-16007/**
+      serviceId: hzero-iam-16007
+
